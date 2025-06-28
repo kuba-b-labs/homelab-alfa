@@ -4,6 +4,7 @@ metadata:
   name: linkding
   labels:
     app: linkding
+  namespace: linkding
 spec:
   replicas: 1
   selector:
@@ -19,3 +20,11 @@ spec:
         image: sissbruecker/linkding:1.41.0-plus-alpine
         ports:
         - containerPort: 9090
+      volumeMounts:
+      - mountPath: "/etc/linkding/data"
+        name: linkding-data-pvc
+    
+    volumes:
+    - name: linkding-data-pvc
+      persistentVolumeClaim:
+        claimName: linkding-data-pvc

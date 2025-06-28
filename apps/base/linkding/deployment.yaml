@@ -5,6 +5,10 @@ metadata:
   labels:
     app: linkding
 spec:
+  securityContext:
+    runAsUser: 82
+    runAsGroup: 82
+    fsGroup: 82
   replicas: 1
   selector:
     matchLabels:
@@ -22,6 +26,9 @@ spec:
         volumeMounts:
           - name: linkding-data
             mountPath: /etc/linkding/data
+        securityContext:
+          allowPrivilegeEscalation: false
+        
       volumes:
       - name: linkding-data
         persistentVolumeClaim:

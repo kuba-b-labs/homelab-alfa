@@ -8,5 +8,4 @@ spec:
       targetPort: 9090
   selector:
     app: linkding
-  #type: LoadBalancer
-  type: ClusterIP
+  type: LoadBalancer

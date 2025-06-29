@@ -33,8 +33,7 @@ spec:
       adminPassword: mischa
       ingress:
         enabled: true
-        annotation:
-          - kubernetes.io/ingress.class: traefik #here you set class of your clusters ingress controller
+        ingressClassName: traefik #here you set class of your clusters ingress controller
         hosts:
           - grafana.test104.pl
         path: /

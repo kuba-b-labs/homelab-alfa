@@ -39,6 +39,6 @@ spec:
         tls:
           - secretName: grafana-tls
             hosts:
-            - grafana.test104.pl
+              - grafana.test104.pl
 
 

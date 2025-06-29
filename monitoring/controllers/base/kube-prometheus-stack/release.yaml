@@ -9,17 +9,17 @@ spec:
   chart:
     spec:
       chart: kube-prometheus-stack
-      version: '75.6.1'
+      version: '66.2.2'
       sourceRef:
         kind: HelmRepository
         name: kube-prometheus-stack
-        namespace: flux-monitoring
+        namespace: monitoring
       interval: 12h
   install: #when you install this stack it comes with its own custom CRD - custom resource definitions
-    crds: Create
-  upgrade:
-    crds: CreateReplace
-  driftDetection:
+    crds: Create #below is whats needed for the stack to run correctly after update
+  upgrade: #when upgrade is detected
+    crds: CreateReplace #create new ones or replace the existing one
+  driftDetection: #this is for flux to revert changes after you set them up manually to the state it is in a helm repo
     mode: enabled
     ignore:
       # Ignore "validated" annotation which is not inserted during install

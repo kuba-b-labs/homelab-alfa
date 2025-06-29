@@ -20,7 +20,7 @@ spec:
         fsGroup: 82
       containers:
       - name: linkding
-        image: sissbruecker/linkding:1.39.0
+        image: sissbruecker/linkding:1.41.0
         ports:
         - containerPort: 9090
         volumeMounts:

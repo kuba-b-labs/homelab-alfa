@@ -31,3 +31,11 @@ spec:
   values:
     grafana:
       adminPassword: mischa
+      ingress:
+        enabled: true
+        annotation:
+          - traefik.io/ingress-controller: traefik
+        hosts:
+          - grafana.test104.pl
+        path: /
+

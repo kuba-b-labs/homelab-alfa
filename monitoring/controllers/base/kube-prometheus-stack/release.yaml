@@ -39,7 +39,7 @@ spec:
           - grafana.test104.pl
         path: /
         tls:
-          - secretName: grafana.test104.pl-tls
+          - secretName: grafana.test104.pl
             hosts:
             - grafana.test104.pl
             #test

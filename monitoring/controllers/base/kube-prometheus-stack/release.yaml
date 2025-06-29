@@ -29,11 +29,15 @@ spec:
         target:
           kind: PrometheusRule
   values:
+    #grafana:
+      #adminPassword: mischa
     grafana:
-      adminPassword: mischa
+      enabled: true
+      # ... other grafana config ...
+
       ingress:
         enabled: true
-        ingressClassName: traefik #here you set class of your clusters ingress controller
+        ingressClassName: traefik
         hosts:
           - grafana.test104.pl
         tls:

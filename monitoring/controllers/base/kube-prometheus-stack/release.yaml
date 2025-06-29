@@ -34,7 +34,7 @@ spec:
       ingress:
         enabled: true
         annotation:
-          - traefik.io/ingress-controller: traefik
+          - kubernetes.io/ingress.class: traefik #here you set class of your clusters ingress controller
         hosts:
           - grafana.test104.pl
         path: /

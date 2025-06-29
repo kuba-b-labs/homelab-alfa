@@ -36,11 +36,9 @@ spec:
         ingressClassName: traefik #here you set class of your clusters ingress controller
         hosts:
           - grafana.test104.pl
-        path: /
         tls:
           - secretName: grafana.test104.pl
             hosts:
             - grafana.test104.pl
-            #test
 
 

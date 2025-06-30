@@ -31,10 +31,6 @@ spec:
         envFrom:
           - secretKeyRef:
               name: linkding-secret
-              key: LD_SUPERUSER_NAME
-          - secretKeyRef:
-              name: linkding-secret
-              key: LD_SUPERUSER_PASSWORD
       volumes:
       - name: linkding-data
         persistentVolumeClaim:

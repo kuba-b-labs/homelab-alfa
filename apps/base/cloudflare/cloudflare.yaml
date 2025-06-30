@@ -23,7 +23,7 @@ spec:
           name: cloudflared
           env:
             # Defines an environment variable for the tunnel token.
-            - name: TUNNEL_TOKEN
+            - name: cloudflare-secret
               valueFrom:
                 secretKeyRef:
                   name: tunnel-token

@@ -47,6 +47,10 @@ spec:
             failureThreshold: 1
             initialDelaySeconds: 10
             periodSeconds: 10
+          decryption:
+            provider: sops
+            secretRef:
+              name: sops-age
 
 
 

@@ -47,5 +47,20 @@ spec:
         existingSecret: grafana-secret
         userKey: adminUser
         passwordKey: adminPassword
-      
+      persistence:
+        enabled: true
+        existingClaim: grafana-pvc
 
+---
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+namespace: monitoring
+metadata:
+  name: grafana-data-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi

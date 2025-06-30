@@ -14,23 +14,25 @@ spec:
       labels:
         app: audiobookshelf
     spec:
-      #securityContext:
-      #  runAsUser: 33 #applied to volume mount
-      #  runAsGroup: 33
-      #  fsGroup: 33
+      securityContext:
+        runAsUser: 1000 #applied to volume mount
+        runAsGroup: 1000
+        fsGroup: 1000
       containers:
       - name: audiobookshelf
         image: ghcr.io/advplyr/audiobookshelf:2.25.0
         ports:
-        - containerPort: 80
+        - containerPort: 3005
       #  volumeMounts:
       #    - name: linkding-data
        #     mountPath: /etc/linkding/data
       #  securityContext:
       #    allowPrivilegeEscalation: false
-      #  envFrom:
+        envFrom:
+          - configMap:
+            name: audiobookshelf-env.yaml
       #    - secretRef:
-      #        name: linkding-secret
+       #       name: linkding-secret
       #volumes:
      # - name: linkding-data
       #  persistentVolumeClaim:

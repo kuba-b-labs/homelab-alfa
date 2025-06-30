@@ -30,7 +30,7 @@ spec:
           kind: PrometheusRule
   values:
     grafana:
-      adminPassword: mischa
+      
       enabled: true
       # ... other grafana config ...
 
@@ -43,5 +43,9 @@ spec:
         - secretName: grafana-tls
           hosts:
             - grafana.test104.pl
-
+      admin:
+        existingSecret: grafana-secret
+        userKey: adminUser
+        passwordKey: adminPassword
+      
 

@@ -29,7 +29,7 @@ spec:
       #  securityContext:
       #    allowPrivilegeEscalation: false
         envFrom:
-          - configMap:
+          - configMapRef:
             name: audiobookshelf-env.yaml
       #    - secretRef:
        #       name: linkding-secret

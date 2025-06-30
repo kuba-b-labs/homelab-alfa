@@ -14,9 +14,9 @@ spec:
       labels:
         app: audiobookshelf
     spec:
-     # securityContext:
-     #   runAsUser: 1000 #applied to volume mount
-     #   runAsGroup: 1000
+      securityContext:
+        runAsUser: 1000 #applied to volume mount
+        runAsGroup: 1000
      #   fsGroup: 1000
       containers:
       - name: audiobookshelf

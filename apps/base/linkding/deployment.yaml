@@ -20,12 +20,12 @@ spec:
       #  fsGroup: 33
       containers:
       - name: linkding
-        image: sissbruecker/linkding:1.39.0
+        image: sissbruecker/linkding:latest
         ports:
         - containerPort: 9090
-        volumeMounts:
-          - name: linkding-data
-            mountPath: /etc/linkding/data
+       # volumeMounts:
+      #    - name: linkding-data
+      #      mountPath: /etc/linkding/data
         securityContext:
           allowPrivilegeEscalation: false
         envFrom:

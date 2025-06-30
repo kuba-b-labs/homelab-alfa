@@ -37,16 +37,16 @@ spec:
         envFrom:
           - configMapRef:
               name: audiobookshelf-env
-        volumes:
-        - name: audiobooks
-          persistentVolumeClaim:
-            claimName: audiobookshelf-audiobooks
-        - name: podcasts
-          persistentVolumeClaim:
-            claimName: audiobookshelf-podcasts
-        - name: config
-          persistentVolumeClaim:
-            claimName: audiobookshelf-config
-        - name: metadata
-          persistentVolumeClaim:
-            claimName: audiobookshelf-metadata
+      volumes:
+      - name: audiobooks
+        persistentVolumeClaim:
+          claimName: audiobookshelf-audiobooks
+      - name: podcasts
+        persistentVolumeClaim:
+          claimName: audiobookshelf-podcasts
+      - name: config
+        persistentVolumeClaim:
+          claimName: audiobookshelf-config
+      - name: metadata
+        persistentVolumeClaim:
+          claimName: audiobookshelf-metadata

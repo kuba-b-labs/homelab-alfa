@@ -28,7 +28,17 @@ spec:
             mountPath: /etc/linkding/data
         securityContext:
           allowPrivilegeEscalation: false
-        
+        env:
+          - name: LD_SUPERUSER_NAME
+            valueFrom:
+              secretKeyRef:
+                name: linkding-secret
+                key: LD_SUPERUSER_NAME
+          - name: LD_SUPERUSER_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: linkding-secret
+                key: LD_SUPERUSER_PASSWORD
       volumes:
       - name: linkding-data
         persistentVolumeClaim:

@@ -14,13 +14,13 @@ spec:
       labels:
         app: audiobookshelf
     spec:
-      securityContext:
-        runAsUser: 1000 #applied to volume mount
-        runAsGroup: 1000
+     # securityContext:
+      #  runAsUser: 1000 #applied to volume mount
+      #  runAsGroup: 1000
      #   fsGroup: 1000
       containers:
       - name: audiobookshelf
-        image: ghcr.io/advplyr/audiobookshelf:latest #2.25.0
+        image: ghcr.io/advplyr/audiobookshelf:2.25.0
         ports:
         - containerPort: 3005
       #  volumeMounts:

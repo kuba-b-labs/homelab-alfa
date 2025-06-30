@@ -29,9 +29,8 @@ spec:
         target:
           kind: PrometheusRule
   values:
-    #grafana:
-      #adminPassword: mischa
     grafana:
+      adminPassword: mischa
       enabled: true
       # ... other grafana config ...
 

@@ -28,6 +28,7 @@ spec:
                 secretKeyRef:
                   name: cloudflare-secret
                   key: token
+          
           command:
             # Configures tunnel run parameters
             - cloudflared

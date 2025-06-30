@@ -14,10 +14,10 @@ spec:
       labels:
         app: linkding
     spec:
-      securityContext:
-        runAsUser: 82 #applied to volume mount
-        runAsGroup: 82
-        fsGroup: 82
+     # securityContext:
+     #   runAsUser: 82 #applied to volume mount
+     #   runAsGroup: 82
+    #    fsGroup: 82
       containers:
       - name: linkding
         image: sissbruecker/linkding:1.39.0

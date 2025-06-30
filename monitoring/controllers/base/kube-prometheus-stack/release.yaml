@@ -45,7 +45,7 @@ spec:
             - grafana.test104.pl
       admin:
         existingSecret: grafana-secret
-        userKey: adminUser
+        userKey: "kuba"
         passwordKey: adminPassword
       
 

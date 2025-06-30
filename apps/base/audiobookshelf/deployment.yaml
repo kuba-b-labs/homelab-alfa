@@ -23,17 +23,30 @@ spec:
         image: ghcr.io/advplyr/audiobookshelf:2.25.0
         ports:
         - containerPort: 3005
-      #  volumeMounts:
-      #    - name: linkding-data
-       #     mountPath: /etc/linkding/data
+        volumeMounts:
+          - name: audiobooks
+            mountPath: /audiobooks
+          - name: podcasts
+            mountPath: /podcasts
+          - name: config
+            mountPath: /config
+          - name: metadata
+            mountPath: /metadata
       #  securityContext:
       #    allowPrivilegeEscalation: false
         envFrom:
           - configMapRef:
               name: audiobookshelf-env
-      #    - secretRef:
-       #       name: linkding-secret
-      #volumes:
-     # - name: linkding-data
-      #  persistentVolumeClaim:
-      #    claimName: linkding-data-pvc
+        volumes:
+        - name: audiobooks
+          persistentVolumeClaim:
+            claimName: audiobookshelf-audiobooks
+        - name: podcasts
+          persistentVolumeClaim:
+            claimName: audiobookshelf-podcasts
+        - name: config
+          persistentVolumeClaim:
+            claimName: audiobookshelf-config
+        - name: metadata
+          persistentVolumeClaim:
+            claimName: audiobookshelf-metadata

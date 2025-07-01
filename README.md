@@ -33,10 +33,7 @@
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
     - [Usage](#usage)
-    - [Testing](#testing)
 - [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [License](#license)
 - [Acknowledgments](#acknowledgments)
 
 ---
@@ -698,7 +695,6 @@ Build homelab from the source and intsall dependencies:
 </details>
 
 <details closed>
-<summary>Contributor Graph</summary>
 <br>
 <p align="left">
    <a href="https://LOCAL{//homelab/}graphs/contributors">
@@ -709,15 +705,9 @@ Build homelab from the source and intsall dependencies:
 
 ---
 
-## License
-
-Homelab is protected under the [LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
-
----
-
 ## Acknowledgments
 
-- Credit `contributors`, `inspiration`, `references`, etc.
+- Credit `mischavandenburg`
 
 <div align="right">
 

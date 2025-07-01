@@ -641,9 +641,11 @@
 
 ### Prerequisites
 
-This project requires the following dependencies:
+This project requires the following:
 
-- **Programming Language:** unknown
+- flux CD
+- k3s for kubernetes
+- cloudnativepg controller (https://cloudnative-pg.io/documentation/current/quickstart/)
 
 ### Installation
 
@@ -660,38 +662,15 @@ Build homelab from the source and intsall dependencies:
     ```sh
     ❯ cd homelab
     ```
-
-3. **Install the dependencies:**
-
-echo 'INSERT-INSTALL-COMMAND-HERE'
-
-### Usage
-
-Run the project with:
-
-echo 'INSERT-RUN-COMMAND-HERE'
-
-### Testing
-
-Homelab uses the {__test_framework__} test framework. Run the test suite with:
-
-echo 'INSERT-TEST-COMMAND-HERE'
-
 ---
 
 ## Roadmap
 
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
+- [X] **`Task 1`**: <strike>k3s Implementation</strike>
+- [X] **`Task 2`**: <strike>postgresql for linkding.</strike>
+- [ ] **`Task 3`**: Azure Key Vault integration.
 
 ---
-
-## Contributing
-
-- **💬 [Join the Discussions](https://LOCAL//homelab/discussions)**: Share your insights, provide feedback, or ask questions.
-- **🐛 [Report Issues](https://LOCAL//homelab/issues)**: Submit bugs found or log feature requests for the `homelab` project.
-- **💡 [Submit Pull Requests](https://LOCAL//homelab/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
 
 <details closed>
 <summary>Contributing Guidelines</summary>

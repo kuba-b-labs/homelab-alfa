@@ -40,7 +40,7 @@
 
 ## Overview
 
-<code> 
+<code>
 The purpose of this homelab is to learn more and apply the knowledge about managing kubernetes services locally.
 Cluster runs with k3s.
 For public access to pods homelab uses cloudflare tunnel with public hostnames and private dns resolution with ingress for Grafana

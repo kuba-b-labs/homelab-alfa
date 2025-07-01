@@ -40,7 +40,12 @@
 
 ## Overview
 
-
+<code> 
+The purpose of this homelab is to learn more and apply the knowledge about managing kubernetes services locally.
+Cluster runs with k3s.
+For public access to pods homelab uses cloudflare tunnel with public hostnames and private dns resolution with ingress for Grafana
+Currently, secret encryption is handled using SOPS. In the future, this will be migrated to Azure Key Vault.
+</code>
 
 ---
 
@@ -643,6 +648,7 @@ This project requires the following:
 - flux CD
 - k3s for kubernetes
 - cloudnativepg controller (https://cloudnative-pg.io/documentation/current/quickstart/)
+- for encryption: gnupg, sops. age
 
 ### Installation
 

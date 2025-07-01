@@ -46,7 +46,7 @@
 
 ## Features
 
-<code>❯ REPLACE-ME</code>
+<code>❯In progress</code>
 
 ---
 

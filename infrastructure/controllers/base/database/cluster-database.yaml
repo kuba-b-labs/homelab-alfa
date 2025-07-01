@@ -5,6 +5,6 @@ metadata:
   namespace: database
 spec:
   instances: 3
-  imageName: ghcr.io/cloudnative-pg/postgresql:13.6 #download specific version, overwrites operator's default option
+  #imageName: ghcr.io/cloudnative-pg/postgresql:13.6 #download specific version, overwrites operator's default option
   storage:
     size: 1Gi

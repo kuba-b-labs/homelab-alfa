@@ -29,6 +29,8 @@ spec:
         securityContext:
           allowPrivilegeEscalation: false
         envFrom:
+          - configMapRef:
+              name: linkding-database
           - secretRef:
               name: linkding-secret
       volumes:

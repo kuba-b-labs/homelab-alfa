@@ -6,3 +6,5 @@ resources:
   - namespace.yaml
   - service.yaml
   - linkding-ingress.yaml
+  - linkding-configmap.yaml
+  - linkding-database-secret.yaml

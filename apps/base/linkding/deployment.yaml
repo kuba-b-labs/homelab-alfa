@@ -33,6 +33,8 @@ spec:
               name: linkding-database
           - secretRef:
               name: linkding-secret
+          - secretRef:
+              name: linkding-database-secret
       volumes:
       - name: linkding-data
         persistentVolumeClaim:

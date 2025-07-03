@@ -44,10 +44,10 @@ spec:
               subPath: widgets.yaml
             - mountPath: /app/config/logs
               name: logs
-          volumes:
-            - name: homepage-config
-              persistentVolumeClaim:
-                - claimName: homepage-config-pvc
-            - name: logs
-              persistentVolumeClaim:
-                - claimName: homepage-config-logs
+      volumes:
+        - name: homepage-config
+          persistentVolumeClaim:
+            - claimName: homepage-config-pvc
+        - name: logs
+          persistentVolumeClaim:
+            - claimName: homepage-config-logs

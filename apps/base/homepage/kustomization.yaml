@@ -3,9 +3,9 @@ kind: Kustomization
 namespace:  homepage
 resources:
   - deployment.yaml
-  - storage.yaml
   - namespace.yaml
   - service.yaml
   - ingress.yaml
   - configmap.yaml
+  - configmap-env.yaml
  

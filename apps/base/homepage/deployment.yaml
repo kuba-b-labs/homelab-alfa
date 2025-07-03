@@ -11,13 +11,16 @@ spec:
     metadata:
       labels:
         app: homepage
+  selector:
+    matchLabels:
+      app: homepage
     spec:
       containers:
         - name: homepage
           image: ghcr.io/gethomepage/homepage:1.3.2
-          env:
-            - name: HOMEPAGE_ALLOWED_HOSTS
-              value: "*"
+          envFrom:
+            - configMapRef:
+              name: homepage-configmap
           ports:
              - containerPort: 3000
           volumeMounts:
@@ -49,8 +52,7 @@ spec:
               name: logs
       volumes:
         - name: homepage-config
-          persistentVolumeClaim:
-            claimName: homepage-config-pvc
+          configMap:
+            name: homepage-configmap
         - name: logs
-          persistentVolumeClaim:
-            claimName: homepage-config-logs
+          emptyDir: {}

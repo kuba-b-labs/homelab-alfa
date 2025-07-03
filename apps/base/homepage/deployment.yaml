@@ -28,7 +28,7 @@ spec:
           imagePullPolicy: Always
           envFrom:
             - configMapRef:
-              name: configmap-env
+                name: configmap-env
           ports:
             - name: http
               containerPort: 3000

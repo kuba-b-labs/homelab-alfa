@@ -2,27 +2,37 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: homepage
+  namespace: default
   labels:
-    app: homepage
+    app.kubernetes.io/name: homepage
 spec:
   revisionHistoryLimit: 3
   replicas: 1
+  strategy:
+    type: RollingUpdate
   selector:
     matchLabels:
-      app: homepage
+      app.kubernetes.io/name: homepage
   template:
     metadata:
       labels:
-        app: homepage
-    spec:                  
+        app.kubernetes.io/name: homepage
+    spec:
+      serviceAccountName: homepage
+      automountServiceAccountToken: true
+      dnsPolicy: ClusterFirst
+      enableServiceLinks: true
       containers:
         - name: homepage
-          image: ghcr.io/gethomepage/homepage:v1.3.2
+          image: "ghcr.io/gethomepage/homepage:v1.3.0"
+          imagePullPolicy: Always
           envFrom:
             - configMapRef:
-                name: configmap-env
+              name: configmap-env
           ports:
-            - containerPort: 3000
+            - name: http
+              containerPort: 3000
+              protocol: TCP
           volumeMounts:
             - mountPath: /app/config/custom.js
               name: homepage-config
@@ -53,6 +63,6 @@ spec:
       volumes:
         - name: homepage-config
           configMap:
-            name: homepage-configmap
+            name: homepage
         - name: logs
           emptyDir: {}

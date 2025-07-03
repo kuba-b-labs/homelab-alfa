@@ -6,6 +6,6 @@ resources:
   - storage.yaml
   - namespace.yaml
   - service.yaml
-  - linkding-ingress.yaml
+  - ingress.yaml
   - configmap.yaml
  

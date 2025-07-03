@@ -7,22 +7,22 @@ metadata:
 spec:
   revisionHistoryLimit: 3
   replicas: 1
-  elector:
+  selector:
     matchLabels:
       app: homepage
   template:
     metadata:
       labels:
         app: homepage
-    spec:
+    spec:                  
       containers:
         - name: homepage
           image: ghcr.io/gethomepage/homepage:1.3.2
           envFrom:
             - configMapRef:
-              name: homepage-configmap
+                name: homepage-configmap
           ports:
-             - containerPort: 3000
+            - containerPort: 3000
           volumeMounts:
             - mountPath: /app/config/custom.js
               name: homepage-config

@@ -7,13 +7,13 @@ metadata:
 spec:
   revisionHistoryLimit: 3
   replicas: 1
+  elector:
+    matchLabels:
+      app: homepage
   template:
     metadata:
       labels:
         app: homepage
-  selector:
-    matchLabels:
-      app: homepage
     spec:
       containers:
         - name: homepage

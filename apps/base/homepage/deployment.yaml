@@ -20,7 +20,7 @@ spec:
           image: ghcr.io/gethomepage/homepage:v1.3.2
           envFrom:
             - configMapRef:
-                name: homepage-configmap
+                name: configmap-env
           ports:
             - containerPort: 3000
           volumeMounts:

@@ -9,4 +9,6 @@ resources:
   - ingress.yaml
   - configmap.yaml
   - configmap-env.yaml
- 
+  - clusterrole.yaml
+  - secret.yaml
+  - serviceaccount.yaml

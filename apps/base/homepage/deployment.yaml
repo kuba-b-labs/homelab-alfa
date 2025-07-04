@@ -22,8 +22,8 @@ spec:
       dnsPolicy: ClusterFirst
       enableServiceLinks: true
       securityContext:
-        #runAsUser: 1000 #applied to volume mount
-        #runAsGroup: 1000
+        runAsUser: 1000 #applied to volume mount
+        runAsGroup: 1000
         fsGroup: 1000
       containers:
         - name: homepage
@@ -67,8 +67,8 @@ spec:
             - mountPath: /app/config/logs
               name: logs
       volumes:
-        - name: homepage-config
-          configMap:
-            name: homepage
+       # - name: homepage-config
+        #  configMap:
+        #    name: homepage
         - name: logs
           emptyDir: {}

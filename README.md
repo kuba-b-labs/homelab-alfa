@@ -670,7 +670,8 @@ Build homelab from the source and intsall dependencies:
 
 - [X] **`Task 1`**: <strike>k3s Implementation</strike>
 - [X] **`Task 2`**: <strike>postgresql for linkding.</strike>
-- [ ] **`Task 3`**: Azure Key Vault integration.
+- [ ] **`Task 3`**: Azure Storage Account backup for database data.
+- [ ] **`Task 4`**: Azure Key Vault integration.
 
 ---
 

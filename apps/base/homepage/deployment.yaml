@@ -67,8 +67,8 @@ spec:
             - mountPath: /app/config/logs
               name: logs
       volumes:
-       # - name: homepage-config
-        #  configMap:
-        #    name: homepage
+        - name: homepage-config
+          configMap:
+            name: homepage
         - name: logs
           emptyDir: {}

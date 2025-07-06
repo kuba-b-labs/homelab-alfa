@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-weight-tracker
+  labels:
+    name: fastapi-weight-tracker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fastapi-weight-tracker
+  template:
+    metadata:
+      labels:
+        app: fastapi-weight-tracker
+    spec:
+      containers:
+        - name: fastapi-weight-tracker
+          image: "malydinozaurpl/fastapi-weight"
+          imagePullPolicy: Always
+          envFrom:
+            - secretRef:
+                name: fastapi-secret
+          ports:
+              containerPort: 8000

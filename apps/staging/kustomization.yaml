@@ -4,6 +4,6 @@ resources:
   - linkding
   - cloudflare
   #- audiobookshelf
-  - homepage
+  #- homepage
   - fastapi-weight-tracker
   

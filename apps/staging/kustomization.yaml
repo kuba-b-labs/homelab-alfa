@@ -5,5 +5,5 @@ resources:
   - cloudflare
   #- audiobookshelf
   #- homepage
-  - fastapi-weight-tracker
+  #- fastapi-weight-tracker
   

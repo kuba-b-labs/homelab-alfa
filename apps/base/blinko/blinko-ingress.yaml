@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  labels:
+  name: blinko-ingress
+spec:
+  ingressClassName: traefik
+  rules:
+  - host: blinko.test104.pl
+    http:
+      paths:
+      - backend:
+          service:
+            name: blinko
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+  #tls:
+  #- hosts:
+  # - linkding.test104.pl
+  # secretName: grafana-tls

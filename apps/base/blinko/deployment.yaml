@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blinko
+  labels:
+    app: blinko
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: blinko
+  template:
+    metadata:
+      labels:
+        app: blinko
+    spec:
+      containers:
+      - name: blinko
+        image: blinkospace/blinko:latest
+        ports:
+        - containerPort: 1111
+        envFrom:
+          - configMapRef:
+              name: blinko-configmap
+          - secretRef:
+              name: blinko-database-secret

@@ -3,9 +3,8 @@ kind: Kustomization
 namespace: blinko
 resources:
   - deployment.yaml
-  - storage.yaml
   - namespace.yaml
   - service.yaml
-  - linkding-ingress.yaml
+  - blinko-ingress.yaml
   - blinko-configmap.yaml
   - blinko-database-secret.yaml

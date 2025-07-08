@@ -6,4 +6,4 @@ resources:
   #- audiobookshelf
   #- homepage
   #- fastapi-weight-tracker
-  
+  - blinko

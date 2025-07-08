@@ -3,4 +3,4 @@ data:
     NODE_ENV: production
 kind: ConfigMap
 metadata:
-  name: blinko-envF
+  name: blinko-env

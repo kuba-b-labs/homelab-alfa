@@ -21,6 +21,6 @@ spec:
         - containerPort: 1111
         envFrom:
           - configMapRef:
-              name: blinko-configmap
+              name: blinko-env
           - secretRef:
               name: blinko-database-secret

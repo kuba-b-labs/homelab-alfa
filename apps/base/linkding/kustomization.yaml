@@ -9,4 +9,4 @@ resources:
   - linkding-ingress.yaml
   - linkding-configmap.yaml
   - linkding-database-secret.yaml
-  - externalsecret.yaml
+  #- externalsecret.yaml

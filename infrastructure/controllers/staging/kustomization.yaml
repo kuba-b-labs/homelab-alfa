@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
  # - renovate
  # - database
- # - external-secrets
+  - external-secrets

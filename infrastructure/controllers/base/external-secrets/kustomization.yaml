@@ -5,3 +5,5 @@ resources:
   - repository.yaml
   - release.yaml
   - namespace.yaml
+  - clustersecretstore.yaml
+  - externalsecret.yaml

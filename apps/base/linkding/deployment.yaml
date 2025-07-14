@@ -32,7 +32,7 @@ spec:
           - configMapRef:
               name: linkding-database
           - secretRef:
-              name: linkding-secret
+              name: linkding-credentials
           - secretRef:
               name: linkding-database-secret
       volumes:

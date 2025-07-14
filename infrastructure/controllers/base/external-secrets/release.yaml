@@ -13,8 +13,7 @@ spec:
         name: external-secrets-repo
         namespace: external-secrets
       interval: 12h
-  install:
+  values:
     crds: false
-  upgrade:
-    crds: CreateReplace
-
+  install:
+    createNamespace: true

@@ -2,20 +2,6 @@ apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
   name: external-secrets-repo 
-  namespace: external-secrets1
 spec:
   interval: 24h
   url: https://charts.external-secrets.io
-
----
-
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: GitRepository
-metadata:
-  name: external-secrets
-  namespace: external-secrets1
-spec:
-  interval: 10m
-  ref:
-    tag: v0.13.0
-  url: https://github.com/external-secrets/external-secrets

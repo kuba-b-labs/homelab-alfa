@@ -3,4 +3,4 @@ kind: Namespace
 metadata:
   name: external-secrets1
   labels:
-    name: external-secrets
+    name: external-secrets1

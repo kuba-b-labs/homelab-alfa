@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: external-secrets-repo
-        namespace: external-secrets
+        namespace: external-secrets1
       interval: 12h
   upgrade:
     crds: CreateReplace

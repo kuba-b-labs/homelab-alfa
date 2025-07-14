@@ -6,6 +6,6 @@ resources:
   - release.yaml
   - namespace.yaml
   - clustersecretstore.yaml
-  - externalsecret.yaml
-  - az-secrets.yaml
-  - deployment-crds.yaml
+ # - externalsecret.yaml
+  #- az-secrets.yaml
+  #- deployment-crds.yaml

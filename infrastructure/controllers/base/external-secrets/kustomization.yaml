@@ -8,4 +8,4 @@ resources:
   - clustersecretstore.yaml
   - externalsecret.yaml
   - az-secrets.yaml
-  - deployment-crds.yaml
+ # - deployment-crds.yaml

@@ -4,4 +4,4 @@ metadata:
   name: external-secrets-repo 
 spec:
   interval: 24h
-  url: https://raw.githubusercontent.com/external-secrets/external-secrets
+  url: https://charts.external-secrets.io

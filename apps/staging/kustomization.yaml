@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
   - linkding
   #- blinko
-  - cloudflare
+  #- cloudflare
   #- audiobookshelf
   #- homepage
   #- fastapi-weight-tracker

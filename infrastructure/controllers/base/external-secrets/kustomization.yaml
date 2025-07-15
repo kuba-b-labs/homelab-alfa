@@ -18,4 +18,4 @@ resources:
 # Deploy default Custom Resources from 'crs' directory
 # INFO: This depends on the CRDs deployment. Will happen after it
 #- deployment-crs.yaml
-- clustersecretstore.yaml
+#- clustersecretstore.yaml

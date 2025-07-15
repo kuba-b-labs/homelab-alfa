@@ -17,4 +17,5 @@ spec:
   interval: 10m
   ref:
     branch: main
+    tag: v0.18.2
   url: http://github.com/external-secrets/external-secrets

@@ -1,20 +1,26 @@
-apiVersion: helm.toolkit.fluxcd.io/v2
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: external-secrets
-  namespace: external-secrets
+  namespace: flux-system
 spec:
-  interval: 30m
+  # Override Release name to avoid the pattern Namespace-Release
+  # Ref: https://fluxcd.io/docs/components/helm/api/#helm.toolkit.fluxcd.io/v2beta1.HelmRelease
+  releaseName: external-secrets
+  targetNamespace: external-secrets
+  interval: 10m
   chart:
     spec:
       chart: external-secrets
-      version: 0.18.2
+      version: 0.3.9
       sourceRef:
         kind: HelmRepository
-        name: external-secrets-repo
+        name: external-secrets
         namespace: flux-system
-      interval: 12h
+  values:
+    installCRDs: false
+
+  # Ref: https://fluxcd.io/docs/components/helm/api/#helm.toolkit.fluxcd.io/v2beta1.Install
   install:
-   crds: CreateReplace
-  upgrade:
-    crds: CreateReplace
+    createNamespace: true

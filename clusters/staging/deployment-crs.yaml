@@ -6,6 +6,7 @@ metadata:
 spec:
   interval: 10m
   path: ./deploy/crds
+  timeout: 5min
   prune: true
   sourceRef:
     kind: GitRepository
@@ -23,6 +24,7 @@ spec:
     - name: external-secrets-crds
   interval: 10m
   path: ./infrastructure/controllers/crs
+  timeout: 5min
   prune: true
   sourceRef:
     kind: GitRepository

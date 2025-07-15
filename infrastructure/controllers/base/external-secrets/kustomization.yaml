@@ -10,7 +10,7 @@ resources:
 - repository.yaml
 
 # Deploy the CRDs
-#- deployment-crds.yaml
+- deployment-crds.yaml
 
 # Deploy the operator
 - release.yaml

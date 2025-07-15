@@ -6,7 +6,7 @@ metadata:
 spec:
   dependsOn:
     - name: external-secrets-crds
-      targetNamespace: flux-system
+
   interval: 10m
   path: ./infrastructure/controllers/base/external-secrets/crs
   prune: true

@@ -8,9 +8,9 @@ spec:
   targetNamespace: external-secrets
   interval: 10m
 
-  # ⬇️ TO MA BYĆ TUTAJ
-  dependsOn:
-    - name: external-secrets-crds
+  # # ⬇️ TO MA BYĆ TUTAJ
+  # dependsOn:
+  #   - name: external-secrets-crds
 
   chart:
     spec:

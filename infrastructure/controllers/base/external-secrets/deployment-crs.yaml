@@ -5,11 +5,12 @@ metadata:
   namespace: flux-system
 spec:
   dependsOn:
-    - name: external-secrets-crds
+    - name: external-secrets
   interval: 10m
   path: ./infrastructure/controllers/base/external-secrets/crs
   prune: true
   sourceRef:
     kind: GitRepository
     name: flux-system
-  
+  wait: true
+  timeout: 2m  

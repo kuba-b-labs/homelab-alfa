@@ -11,5 +11,4 @@ spec:
     kind: GitRepository
     name: external-secrets
     namespace: flux-system
-  wait: true
-  timeout: 2m
+

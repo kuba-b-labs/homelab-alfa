@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m
-  timeout: 5min
+  timeout: 5m
   path: ./deploy/crds
   prune: true
   sourceRef:
@@ -23,7 +23,7 @@ spec:
   dependsOn:
     - name: external-secrets-crds
   interval: 10m
-  timeout: 5min
+  timeout: 5m
   path: ./infrastructure/controllers/crs
   prune: true
   sourceRef:

@@ -5,8 +5,8 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m
-  path: ./deploy/crds
   timeout: 5min
+  path: ./deploy/crds
   prune: true
   sourceRef:
     kind: GitRepository
@@ -23,8 +23,8 @@ spec:
   dependsOn:
     - name: external-secrets-crds
   interval: 10m
-  path: ./infrastructure/controllers/crs
   timeout: 5min
+  path: ./infrastructure/controllers/crs
   prune: true
   sourceRef:
     kind: GitRepository

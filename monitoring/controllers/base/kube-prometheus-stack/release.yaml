@@ -4,14 +4,10 @@ metadata:
   name: kube-prometheus-stack
   namespace: monitoring
 spec:
-  interval: 30m
   chart:
     spec:
       chart: kube-prometheus-stack
       version: "66.2.2"
-
-      # version: "58.x"
-
       sourceRef:
         kind: HelmRepository
         name: kube-prometheus-stack
@@ -24,25 +20,38 @@ spec:
   driftDetection:
     mode: enabled
     ignore:
-      # Ignore "validated" annotation which is not inserted during install
       - paths: ["/metadata/annotations/prometheus-operator-validated"]
         target:
           kind: PrometheusRule
   values:
-    grafana:
-      
+    alertmanager:
       enabled: true
-      # ... other grafana config ...
+      config:
+        global:
+          resolve_timeout: 5m
+        route:
+          receiver: 'discord-notifications'
+          group_by: ['alertname']
+          group_wait: 30s
+          group_interval: 5m
+          repeat_interval: 3h
+        receivers:
+          - name: 'discord-notifications'
+            webhook_configs:
+              - url: 'https://discord.com/api/webhooks/1397652866113732799/I0j9zQMoihvwDOA_UdCN3qVi9NrtwvBF0P7eSRCKQlNx1JlFNUHV7Ggyqvr4OuVWRvLv'
+                send_resolved: true
 
+    grafana:
+      enabled: true
       ingress:
         enabled: true
         ingressClassName: traefik
         hosts:
           - grafana.test104.pl
         tls:
-        - secretName: grafana-tls
-          hosts:
-            - grafana.test104.pl
+          - secretName: grafana-tls
+            hosts:
+              - grafana.test104.pl
       admin:
         existingSecret: grafana-secret
         userKey: adminUser
@@ -50,7 +59,6 @@ spec:
       persistence:
         enabled: true
         existingClaim: grafana-data-pvc
-
 ---
 
 apiVersion: v1

@@ -24,6 +24,9 @@ spec:
         target:
           kind: PrometheusRule
   values:
+    defaultRules:
+      rules:
+        alertmanager: false
     alertmanager:
       enabled: true
       config:

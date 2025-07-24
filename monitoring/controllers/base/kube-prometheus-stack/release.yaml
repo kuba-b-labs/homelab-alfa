@@ -47,6 +47,15 @@ spec:
             webhook_configs:
               - url: 'https://discord.com/api/webhooks/1397652866113732799/I0j9zQMoihvwDOA_UdCN3qVi9NrtwvBF0P7eSRCKQlNx1JlFNUHV7Ggyqvr4OuVWRvLv'
                 send_resolved: true
+                http_config:
+              follow_redirects: true
+            headers:
+              Content-Type: 'application/json'
+            body: |
+              {
+                "username": "Prometheus",
+                "content": "{{ .CommonAnnotations.summary }} - {{ .CommonAnnotations.description }}"
+              }
     grafana:
 
       enabled: true

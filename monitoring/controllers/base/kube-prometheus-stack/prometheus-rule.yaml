@@ -1,0 +1,20 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: RAM-usage
+  #namespace: monitoring  # should match your Prometheus release namespace
+  labels:
+    release: kube-prometheus-stack  # must match the release name of your Helm chart
+spec:
+  groups:
+  - name: usage-monitoring
+    rules:
+    - alert: HighRAMUsage
+      expr: sum(container_memory_working_set_bytes{namespace=~"$namespace"}) / sum(machine_memory_bytes{}) > 0.7
+      for: 5m
+      labels:
+        severity: warning
+      annotations:
+        summary: RAM Usage exceeded 70%
+        description: |
+          RAM Usage exceeded 70%!!

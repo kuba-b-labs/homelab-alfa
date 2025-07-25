@@ -8,3 +8,4 @@ resources:
   #- grafana-secret.yaml
   - externalsecret.yaml
   - grafana-dashboard.yaml
+  - prometheus-rule.yaml

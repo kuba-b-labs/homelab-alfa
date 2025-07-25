@@ -29,24 +29,7 @@ spec:
         target:
           kind: PrometheusRule
   values:
-    alertmanager:
-      enabled: true
-      config:
-        global:
-          resolve_timeout: 5m
-        route:
-          receiver: 'discord-notifications'
-          group_by: ['alertname']
-          group_wait: 30s
-          group_interval: 5m
-          repeat_interval: 3h
-  
-        receivers:
-          - name: "null"
-          - name: 'discord-notifications'
-            discord_configs:
-              - webhook_url: 'https://discord.com/api/webhooks/1397652866113732799/I0j9zQMoihvwDOA_UdCN3qVi9NrtwvBF0P7eSRCKQlNx1JlFNUHV7Ggyqvr4OuVWRvLv'
-                send_resolved: true
+
     grafana:
 
       enabled: true

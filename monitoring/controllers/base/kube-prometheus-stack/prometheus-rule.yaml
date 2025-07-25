@@ -10,7 +10,7 @@ spec:
   - name: usage-monitoring
     rules:
     - alert: HighRAMUsage
-      expr: sum(container_memory_working_set_bytes{namespace=~"$namespace"}) / sum(machine_memory_bytes{}) > 0.7
+      expr: sum(container_memory_working_set_bytes) / sum(machine_memory_bytes{}) > 0.7
       for: 5m
       labels:
         severity: warning

@@ -4,3 +4,4 @@ namespace: database
 resources:
   - namespace.yaml
   - cluster-database.yaml
+  - externalsecret.yaml

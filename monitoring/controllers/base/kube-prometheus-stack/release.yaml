@@ -44,7 +44,7 @@ spec:
           hosts:
             - grafana.test104.pl
       admin:
-        existingSecret: grafana-secret
+        existingSecret: grafana-credentials
         userKey: adminUser
         passwordKey: adminPassword
       persistence:

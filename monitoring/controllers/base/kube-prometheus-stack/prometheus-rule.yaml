@@ -1,7 +1,7 @@
 apiVersion: monitoring.coreos.com/v1
 kind: PrometheusRule
 metadata:
-  name: RAM-usage
+  name: ram-usage
   #namespace: monitoring  # should match your Prometheus release namespace
   labels:
     release: kube-prometheus-stack  # must match the release name of your Helm chart

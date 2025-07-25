@@ -7,3 +7,4 @@ resources:
   - release.yaml
   #- grafana-secret.yaml
   - externalsecret.yaml
+  - grafana-dashboard.yaml

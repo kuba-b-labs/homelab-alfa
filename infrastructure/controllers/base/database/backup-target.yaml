@@ -10,6 +10,38 @@ spec:
   storage:
     #storageClass: csi-hostpath-sc
     size: 1Gi
+  
+  #-----------------------------------------------------------------------------
+  #recover from backup thats already locally on node
+  # bootstrap:
+  #   recovery:
+  #     backup:
+  #       name: scheduled-backup-20250717074030
+
+  #
+  #
+  #-----------------------------------------------------------------------------
+
+  #------------------------------------------------------------------------------
+  # bootstrap: #here you tell it to initialize from backup
+  #     recovery:
+  #       source: clusterBackup # the name of external Cluster below for backup
+  #       recoveryTarget:
+  #       targetTime: "2025-07-16T14:30:00Z"  # Change to your desired timestamp (UTC)
+
+  # externalClusters:
+  #   - name: clusterBackup
+  #     barmanObjectStore:
+  #       serverName: postgresql
+  #       destinationPath: "https://backupjb104k8s.blob.core.windows.net/database"
+  #       azureCredentials:
+  #         connectionString:
+  #           name: storage-creds1
+  #           key: connection_string
+  #       wal:
+  #         maxParallel: 1
+  #   # 🔽 Point-In-Time Recovery block
+  #------------------------------------------------------------------------------ 
 
   # Backup properties
   # This assumes a local minio setup

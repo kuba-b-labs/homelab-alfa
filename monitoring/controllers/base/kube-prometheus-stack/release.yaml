@@ -30,8 +30,8 @@ spec:
           kind: PrometheusRule
   values:
     defaultRules:
-    rules:
-      alertmanager: false
+      rules:
+        alertmanager: false
     alertmanager:
       alertmanagerSpec:
         secrets:

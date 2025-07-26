@@ -57,7 +57,6 @@ spec:
           - name: 'test-discord'
             discord_configs:
               - webhook_url: discord-webhook-url
-                key: webhook-url
                 send_resolved: true
     grafana:
       

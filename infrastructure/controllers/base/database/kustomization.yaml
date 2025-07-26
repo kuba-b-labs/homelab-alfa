@@ -5,3 +5,5 @@ resources:
   - namespace.yaml
   - cluster-database.yaml
   - externalsecret.yaml
+  - backup-target.yaml
+  - scheduled-backup.yaml

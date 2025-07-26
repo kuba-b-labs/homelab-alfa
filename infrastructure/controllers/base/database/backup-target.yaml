@@ -1,0 +1,25 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: postgresql-backup-target
+spec:
+  instances: 1
+  primaryUpdateStrategy: unsupervised
+
+  # Persistent storage configuration
+  storage:
+    #storageClass: csi-hostpath-sc
+    size: 1Gi
+
+  # Backup properties
+  # This assumes a local minio setup
+  backup:
+    barmanObjectStore:
+      destinationPath: "https://backupjb104k8s.blob.core.windows.net/database"
+      #remember you need new container for new backups, cant reuse one
+      azureCredentials:
+        connectionString:
+          name: storage-creds
+          key: connection_string
+      wal:
+        compression: gzip

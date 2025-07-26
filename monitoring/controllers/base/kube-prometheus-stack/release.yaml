@@ -34,8 +34,10 @@ spec:
         alertmanager: false
     alertmanager:
       alertmanagerSpec:
+        useExistingSecret: true
         secrets:
           - discord-webhook-url
+
       enabled: true
       config:
         global:

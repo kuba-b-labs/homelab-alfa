@@ -33,9 +33,9 @@ spec:
       rules:
         alertmanager: false
     alertmanager:
-      alertmanagerSpec:
-        secrets:
-          - discord-webhook-url
+      # alertmanagerSpec:
+      #   secrets:
+      #     - discord-webhook-url
 
       enabled: true
       config:

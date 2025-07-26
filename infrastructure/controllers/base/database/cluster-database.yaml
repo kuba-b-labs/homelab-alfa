@@ -8,3 +8,13 @@ spec:
   #imageName: ghcr.io/cloudnative-pg/postgresql:13.6 #download specific version, overwrites operator's default option
   storage:
     size: 1Gi
+  backup:
+    barmanObjectStore:
+      destinationPath: "https://backupjb104k8s.blob.core.windows.net/database"
+      #remember you need new container for new backups, cant reuse one
+      azureCredentials:
+        connectionString:
+          name: storage-creds
+          key: connection_string
+      wal:
+        compression: gzip

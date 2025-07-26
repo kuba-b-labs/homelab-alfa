@@ -50,10 +50,10 @@ spec:
 
         receivers:
           - name: "null"
-          - name: 'discord-notifications'
-            discord_configs:
-              - webhookUrlFile: '/etc/alertmanager/secrets/discord-webhook-url/webhook-url' #path is /etc/alermanager/secrets/{secret}/{key in secret}
-                send_resolved: true
+          # - name: 'discord-notifications'
+          #   discord_configs:
+          #     - webhookUrlFile: '/etc/alertmanager/secrets/discord-webhook-url/webhook-url' #path is /etc/alermanager/secrets/{secret}/{key in secret}
+          #       send_resolved: true
           - name: 'test-discord'
             discord_configs:
               - webhook_url: 'https://discord.com/api/webhooks/test123'

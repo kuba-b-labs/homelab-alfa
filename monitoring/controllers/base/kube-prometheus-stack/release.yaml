@@ -70,10 +70,10 @@ spec:
         - secretName: grafana-tls
           hosts:
             - grafana.test104.pl
-      admin:
-        existingSecret: grafana-credentials
-        userKey: adminUser
-        passwordKey: adminPassword
+      # admin:
+      #   existingSecret: grafana-credentials
+      #   userKey: adminUser
+      #   passwordKey: adminPassword
       persistence:
         enabled: true
         existingClaim: grafana-data-pvc

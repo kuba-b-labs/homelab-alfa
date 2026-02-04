@@ -6,6 +6,6 @@ resources:
   - repository.yaml
   - release.yaml
   #- grafana-secret.yaml
-  - externalsecret.yaml
+  #- externalsecret.yaml
   - grafana-dashboard.yaml
   - prometheus-rule.yaml
